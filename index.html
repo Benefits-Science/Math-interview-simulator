@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاكي المقابلة الشفوية - نيون LCD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <div class="marquee-wrapper">
+            <div class="marquee-text">
+                ⚡ نظام التقييم الرقمي المتطور ⚡ مسابقة الأساتذة 2026 ⚡ تخصص رياضيات (متوسط) ⚡ بيداغوجيا، تخصص، مواقف تربوية، وجانب شخصي ⚡
+            </div>
+        </div>
+
+        <header>
+            <h1 class="main-title">رادار <span>المقابلة الشفوية</span></h1>
+        </header>
+
+        <nav class="category-nav">
+            <button class="nav-btn active" onclick="changeCategory('شخصي', this)">الجانب الشخصي</button>
+            <button class="nav-btn" onclick="changeCategory('بيداغوجيا', this)">البيداغوجيا</button>
+            <button class="nav-btn" onclick="changeCategory('تخصص رياضيات', this)">التخصص</button>
+            <button class="nav-btn" onclick="changeCategory('مواقف', this)">المواقف وأنواع التلاميذ</button>
+        </nav>
+
+        <div class="status-info" id="current-category-label">الوضع الحالي: تحليل الجانب الشخصي</div>
+
+        <div class="question-display" id="question-box">اضغط "سؤال جديد" لبدء الفحص الرقمي..</div>
+
+        <textarea id="user-input" placeholder="اكتب إجابتك هنا بدقة علمية..."></textarea>
+
+        <div class="action-bar">
+            <button class="btn btn-new" onclick="getNewQuestion()">سؤال جديد 🔄</button>
+            <button class="btn btn-check" onclick="checkResponse()">الإطلاع على النتيجة 📊</button>
+        </div>
+
+        <div id="feedback-area"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
